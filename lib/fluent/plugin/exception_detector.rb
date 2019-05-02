@@ -346,7 +346,7 @@ module Fluent
         @buffer_start_time = Time.now
       end
       unless message.nil?
-        @messages << message
+        @messages << message + "\n"
         @buffer_size += message.length
       end
     end
